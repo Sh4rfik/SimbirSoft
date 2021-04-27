@@ -14,10 +14,5 @@ public class DownloadApp {
         Map<String, Integer> map = splitAndCount(saveToHTML(site));
         DataBaseActions.connect(map);
 
-
-
-
-
-
     }
 }

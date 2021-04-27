@@ -47,7 +47,6 @@ public class DataBaseActions {
                 preparedStatement.setInt(2, m.getValue());
                 preparedStatement.executeUpdate();
             }
-
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
