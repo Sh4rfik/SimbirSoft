@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class SplitByUniqWords {
 
-    public static void splitAndCount(String line){
+    public static Map<String,Integer> splitAndCount(String line){
 
         String s = "";
         Map<String, Integer> map = new HashMap<>();
@@ -31,5 +31,7 @@ public class SplitByUniqWords {
         for (Map.Entry<String, Integer> m : map.entrySet()){
             System.out.println(m.getKey() + " - " + m.getValue());
         }
+        return map;
     }
+
 }

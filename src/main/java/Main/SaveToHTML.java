@@ -16,7 +16,6 @@ public class SaveToHTML {
         FileWriter file;
         String s = "";
 
-
         try {
             url = new URL(site);
             input = url.openStream();

@@ -1,5 +1,7 @@
 package Main;
 
+import java.util.Map;
+
 import static Main.SaveToHTML.saveToHTML;
 import static Main.SplitByUniqWords.splitAndCount;
 
@@ -7,9 +9,13 @@ public class DownloadApp {
 
     public static void main(String[] args) {
 
-        String site = "https://ww.simbirsoft.com/";
+        String site = "https://www.simbirsoft.com/";
 
-        splitAndCount(saveToHTML(site));
+        Map<String, Integer> map = splitAndCount(saveToHTML(site));
+        DataBaseActions.connect(map);
+
+
+
 
 
 
