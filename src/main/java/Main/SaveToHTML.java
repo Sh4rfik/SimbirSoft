@@ -4,6 +4,7 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+
 public class SaveToHTML {
 
     public static String saveToHTML(String site) {
@@ -11,9 +12,10 @@ public class SaveToHTML {
         URL url;
         InputStream input = null;
         BufferedReader reader;
-        String line = null;
+        String line;
         FileWriter file;
         String s = "";
+
 
         try {
             url = new URL(site);
@@ -22,7 +24,6 @@ public class SaveToHTML {
             file = new FileWriter("C:\\Users\\Administrator\\Downloads\\page.html");
 
             while ((line = reader.readLine()) != null) {
-                //System.out.println(line);
                 file.write(line);
                 s += line;
             }
@@ -39,7 +40,5 @@ public class SaveToHTML {
         }
         return s;
     }
-    public void isValidAddress(String site){
 
-    }
 }

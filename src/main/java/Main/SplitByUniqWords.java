@@ -1,9 +1,7 @@
 package Main;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -18,11 +16,9 @@ public class SplitByUniqWords {
 
         Matcher m1 = p.matcher(line);
 
-
         while (m1.find()){
             s += m1.group()+" ";
         }
-        System.out.println(s);
 
         String[] array = s.split("['',',','.','!','?','\"',';',':','\\[','\\]','(',')','\\n','\\r','\\t', '\\s']");
 
@@ -32,11 +28,8 @@ public class SplitByUniqWords {
             } else map.put(str, map.get(str)+1);
         }
 
-
         for (Map.Entry<String, Integer> m : map.entrySet()){
             System.out.println(m.getKey() + " - " + m.getValue());
         }
-
-
     }
 }
