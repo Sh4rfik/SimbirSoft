@@ -3,7 +3,7 @@ package Main;
 import java.util.Map;
 
 import static Main.SaveToHTML.saveToHTML;
-import static Main.SplitByUniqWords.splitAndCount;
+import static Main.SplitByUniqueWords.splitAndCount;
 
 public class DownloadApp {
 

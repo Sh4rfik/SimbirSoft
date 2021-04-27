@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class SplitByUniqWords {
+public class SplitByUniqueWords {
 
     public static Map<String,Integer> splitAndCount(String line){
 
