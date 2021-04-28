@@ -2,21 +2,22 @@ package Main;
 
 import java.sql.*;
 import java.util.Map;
+import java.util.logging.Level;
+
 
 public class DataBaseActions {
 
     private static Connection connection;
     private static PreparedStatement preparedStatement;
     private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
-    private static final String USER = "postgres";
+    private static final String USER = "postgrs";
     private static final String PASSWORD = "postgres";
-
 
     public static void connect(Map<String, Integer> map) {
 
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
-            query(map);
+            addStatistic(map);
         } catch (SQLException ex) {
             ex.printStackTrace();
         } finally {
@@ -38,7 +39,7 @@ public class DataBaseActions {
         }
     }
 
-    public static void query(Map<String, Integer> map) {
+    public static void addStatistic(Map<String, Integer> map) {
 
         try {
             preparedStatement = connection.prepareStatement("INSERT INTO public.statistic (word, count) VALUES (?, ?)");
