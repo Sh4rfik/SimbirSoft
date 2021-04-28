@@ -1,5 +1,6 @@
 package Main;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
@@ -16,11 +17,12 @@ public class Log {
     }
 
     public static void logger() throws IOException {
-        FileHandler fh;
-        fh = new FileHandler("C:\\Users\\Administrator\\log.config", true);
+        File file = new File("C:\\Users\\Administrator\\log.config");
+        fh = new FileHandler(file.getAbsolutePath(), true);
         logger.addHandler(fh);
         SimpleFormatter formatter = new SimpleFormatter();
         fh.setFormatter(formatter);
+        System.out.println(file.getAbsolutePath());
     }
 
 }
