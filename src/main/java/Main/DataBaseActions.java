@@ -9,7 +9,7 @@ public class DataBaseActions {
     private static Connection connection;
     private static PreparedStatement preparedStatement;
     private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
-    private static final String USER = "postgrs";
+    private static final String USER = "postgres";
     private static final String PASSWORD = "postgres";
 
     public static void connect(Map<String, Integer> map) {
