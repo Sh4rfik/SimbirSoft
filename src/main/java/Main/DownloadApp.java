@@ -4,7 +4,6 @@ package Main;
 import java.io.IOException;
 import java.util.Map;
 import java.util.logging.Level;
-
 import static Main.Log.*;
 import static Main.SplintAndSaveMethod.*;
 
@@ -12,7 +11,6 @@ import static Main.SplintAndSaveMethod.*;
 public class DownloadApp {
 
     public static void main(String[] args) throws IOException {
-
 
         //Адрес сайта для сохранения страницы
         String site = "https://www.simbirsoft.com/";

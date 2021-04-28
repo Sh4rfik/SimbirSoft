@@ -2,7 +2,6 @@ package Main;
 
 import java.sql.*;
 import java.util.Map;
-import java.util.logging.Level;
 
 
 public class DataBaseActions {
